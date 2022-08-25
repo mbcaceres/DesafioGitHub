@@ -1,0 +1,270 @@
+/*GRID*/
+
+.gridContainer {
+display: grid;
+grid-template-columns: 50% 50%;
+grid-template-rows: auto auto auto auto auto auto;
+overflow: hidden;
+grid-template-areas:
+"header header"
+"imagenPortada imagenPortada"
+"textoBienvenida textoBienvenida"
+"secciones secciones"
+"blogImagen blogTexto"
+"footer footer";
+}
+
+header{grid-area: header; display:flex; background-color: white; position: static; border: lightpink 1px;}
+.imagenPortada {grid-area: imagenPortada;}
+.textoBienvenida {grid-area: textoBienvenida;
+font-family: montserrat;}
+.secciones {grid-area: secciones; 
+	display: flex; 
+	justify-content: space-between;
+	padding: 10px;
+	margin: 10 px;}
+.blogImagen {grid-area: blogImagen;
+height: 100%;
+width: 100%}
+.blogTexto {grid-area: blogTexto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding-left: 30px;
+	padding-top: 250px;
+	background-color: lightpink;
+	color: white;
+	font-family: montserrat;}
+
+
+footer {grid-area: footer;
+font-family: montserrat;
+background-color: #f1f1f1;}
+
+/*HEADER*/
+
+.tipografiaSitio {
+	font-family: Montserrat;}
+
+
+li {list-style-type: none; padding: 15px; margin: 10px;}
+a {text-decoration: none;}
+nav {width: 100%;}
+
+.logo {margin: 10px;}
+.listadoMenu{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;}
+.imagenPortada {width:100%;}
+.textoBienvenida {
+	text-align: center;
+	padding: 10px;
+	background-color: lightpink;
+	color:white;}
+
+
+/*SECCIONES*/
+
+.imagenInvitaciones{
+	width: 350px;
+	height: 350px;}
+.imagenBranding{
+	width: 350px;
+	height: 350px;}
+.imagenSocialMedia{	
+	width: 350px;
+	height: 350px;}
+
+	/*BLOG*/
+	.boton {
+border: 1px solid whitesmoke; /*anchura, estilo y color borde*/
+padding: 10px; /*espacio alrededor texto*/
+background-color: white; /*color botón*/
+color: hotpink; /*color texto*/
+text-decoration: none; /*decoración texto*/
+text-transform: uppercase; /*capitalización texto*/
+font-family: 'Montserrat', sans-serif; /*tipografía texto*/
+border-radius: 50px; /*bordes redondos*/
+} 
+
+	/*FOOTER*/
+.footerEdition {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding-left: 30px;}
+
+/* GRID BRANDING*/
+.gridBranding {
+display: grid;
+grid-template-columns: 50% 50%;
+grid-template-rows: auto auto auto auto auto auto;
+overflow: hidden;
+grid-template-areas:
+"header header"
+"imagenPortada imagenPortada"
+"textoBranding textoBranding"
+"tipografiaPortfolio tipografiaPortfolio"
+"imagenesPortfolio imagenesPortfolio"
+"footer footer";}
+
+
+.textoBranding {
+	grid-template-areas: textoBranding;
+	font-family: montserrat,sans-serif;
+	background-color: lightpink;
+	color: white;
+	padding: 20px;
+}
+
+.tipografiaPortfolio {
+	grid-template-areas: tipografiaPortfolio;
+	font-family: montserrat,sans-serif;	}
+
+.imagenesPortfolio {
+	grid-template-areas: imagenesPortfolio;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;}
+
+/*GRID MENU*/
+.gridEventos {
+display: grid;
+grid-template-columns: 50% 50%;
+grid-template-rows: auto auto auto auto auto;
+overflow: hidden;
+grid-template-areas:
+"header header"
+"imagenPortada imagenPortada"
+"eventosImagenes eventosImagenes"
+"footer footer";}
+
+.eventosImagenes {
+	grid-template-areas: eventosImagenes;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	font-family: montserrat;
+	color: lightpink;
+}
+
+/*NOSOTROS*/
+/*GRID NOSOTROS*/
+
+.gridNosotros{
+display: grid;
+grid-template-columns: 50% 50%;
+grid-template-rows: auto auto auto auto;
+overflow: hidden;
+grid-template-areas:
+"header header"
+"imagenPortada imagenPortada"
+"textoNosotros textoNosotros"
+"footer footer";}
+
+.textoNosotros {
+	grid-template-areas: textoNosotros;
+	font-family: montserrat,sans-serif;
+	background-color: lightpink;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+/*CONTACTO*/
+/*GRID CONTACTO*/
+
+.gridContacto {
+display: grid;
+grid-template-columns: 50% 50%;
+grid-template-rows: auto auto auto auto;
+overflow: hidden;
+grid-template-areas:
+"header header"
+"imagenPortada imagenPortada"
+"formularioContacto formularioContacto"
+"footer footer";
+}
+
+.formularioContacto {
+	grid-area: formularioContacto;
+	font-family: montserrat,sans-serif;
+	padding-left: 30px;
+	size: 14 px;
+	line-height: 300%;
+	background-color: lightpink;
+	color: white;
+	font-style: bold;
+}
+
+.boton {
+border: 1px solid whitesmoke; /*anchura, estilo y color borde*/
+padding: 10px; /*espacio alrededor texto*/
+background-color: white; /*color botón*/
+color: coralpink; /*color texto*/
+text-decoration: none; /*decoración texto*/
+text-transform: uppercase; /*capitalización texto*/
+font-family: 'Montserrat', sans-serif; /*tipografía texto*/
+border-radius: 50px; /*bordes redondos*/
+} 
+
+
+/*MEDIAQUERIE*/
+/*MOBILE*/
+@media only screen and (max-width: 768px) {
+body .gridContainer {
+display: grid;
+grid-template-areas:
+"header"
+"imagenPortada"
+"textoBienvenida"
+"secciones"
+"blogImagen"
+"blogTexto"
+"formularioContacto"
+"footer";
+grid-template-columns: 100%;
+grid-template-rows: auto auto auto auto auto auto auto;}
+header {flex-direction: column;}
+	.listadoMenu {flex-direction: column;
+	justify-content: flex-start;}
+.secciones {display: flex;
+	flex-direction: column;}
+img { max-width: 100%}
+.blogTexto {
+	padding-left: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+
+/*TABLET*/
+
+@media only screen and (min-min-width 769px) and (max-width:1023px) {
+body .gridContainer {
+display: grid;
+grid-template-areas:
+"header"
+"imagenPortada"
+"textoBienvenida"
+"secciones"
+"blogImagen"
+"blogTexto"
+"formularioContacto"
+"footer";
+grid-template-columns: 100%;
+grid-template-rows: auto auto auto auto auto auto auto;}
+.secciones {display: flex;
+	flex-direction: column;}
+img { max-width: 100%}
+.blogTexto {
+	padding-left: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+/*DESKTOP*/
+@media only screen and (in-widht:1024px){
+}
+
