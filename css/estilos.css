@@ -112,6 +112,7 @@ grid-template-areas:
 
 .textoBranding {
 	grid-template-areas: textoBranding;
+	grid-area: textoBranding;
 	font-family: montserrat,sans-serif;
 	background-color: lightpink;
 	color: white;
@@ -120,13 +121,15 @@ grid-template-areas:
 
 .tipografiaPortfolio {
 	grid-template-areas: tipografiaPortfolio;
+	grid-area: tipografiaPortfolio;
 	font-family: montserrat,sans-serif;	}
 
 .imagenesPortfolio {
 	grid-template-areas: imagenesPortfolio;
+	grid-area: imagenesPortfolio;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;}
+	justify-content: flex-start;}
 
 /*GRID MENU*/
 .gridEventos {
@@ -170,7 +173,7 @@ grid-template-areas:
 	color: white;
 	padding: 20px;
 	text-align: center;
-}
+	grid-area: textoNosotros;}
 
 /*CONTACTO*/
 /*GRID CONTACTO*/
@@ -213,7 +216,7 @@ border-radius: 50px; /*bordes redondos*/
 /*MEDIAQUERIE*/
 /*MOBILE*/
 @media only screen and (max-width: 768px) {
-body .gridContainer {
+body .gridContainer .gridNosotros .gridBranding .gridContacto .gridEventos{
 display: grid;
 grid-template-areas:
 "header"
@@ -241,7 +244,7 @@ img { max-width: 100%}
 
 /*TABLET*/
 
-@media only screen and (min-min-width 769px) and (max-width:1023px) {
+@media only screen and (min-min-width 769px) and (max-width:1023px)
 body .gridContainer {
 display: grid;
 grid-template-areas:
@@ -257,6 +260,7 @@ grid-template-columns: 100%;
 grid-template-rows: auto auto auto auto auto auto auto;}
 .secciones {display: flex;
 	flex-direction: column;}
+
 img { max-width: 100%}
 .blogTexto {
 	padding-left: 30px;
@@ -265,6 +269,5 @@ img { max-width: 100%}
 }
 
 /*DESKTOP*/
-@media only screen and (in-widht:1024px){
-}
+@media only screen and (min-widht:1024px)
 
