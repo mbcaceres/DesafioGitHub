@@ -1,2 +1,2 @@
 # DesafioGitHub
-Desafío de crear repositorio en GIT HUB.
+Desarrollo web FULL RESPONSIVE con 5 páginas
